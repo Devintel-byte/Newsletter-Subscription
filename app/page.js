@@ -36,15 +36,15 @@ export default function Home() {
   return (
     <>
     {!success && 
-      <div className='bg-slate-950'>
+      <div className='md:bg-slate-950'>
 
-<section className='py-4 px-4 text-base md:w-[720px] lg:w-[900px] m-0 w-[100%] h-[100vh]'>
-      <div className='flex w-[820px] gap-10 rounded-2xl shadow-lg bg-white overflow-hidden py-8 px-8 absolute justify-center items-center top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>
+<section className='md:py-4 md:px-4 flex text-base md:w-[720px] lg:w-[900px] m-0 w-[100%] h-[100vh]'>
+      <div className='md:flex flex flex-col-reverse md:flex-row w-[820px] md:gap-10 md:rounded-2xl md:shadow-lg bg-white md:overflow-hidden md:py-3 md:px-3 md:absolute md:justify-center md:items-center md:top-[50%] md:left-[50%] md:translate-x-[-50%] md:translate-y-[-50%]'>
         
-    <div className='pb-5 flex-1'>
-      <h1 className='text-[58px] text-slate-900 font-bold mb-10 mt-8'>Stay updated!</h1>
+    <div className='pb-5 md:flex-1 px-4'>
+      <h1 className='md:text-[58px] text-[42px] text-slate-900 font-bold mb-8 md:mb-10 mt-8'>Stay updated!</h1>
       <div>
-        <h3 className='mb-3 max-w-full'>Join 80,000 product managers receiving monthly update on:</h3>
+        <h3 className='mb-3 max-w-full'>Join 80,000+ product managers receiving monthly update on:</h3>
         <p className='flex'>
           <Image className='pr-3'
           src='/icon-list.svg' 
@@ -71,7 +71,7 @@ export default function Home() {
         </p>
       </div>
       
-      <div className='mt-5'>
+      <div className='md:mt-6 mt-7'>
         <form onSubmit={formik.handleSubmit} autoComplete='off'>
           <article className='flex items-center justify-between'>
             <label className="block mb-2 text-sm font-semibold" for="email">
@@ -88,7 +88,7 @@ export default function Home() {
           placeholder="email@company.com" 
           value={formik.values.email}
           onChange={formik.handleChange} />
-          <button className='bg-slate-950 text-white border-none rounded-lg w-full p-2.5 mt-4 focus:bg-success' 
+          <button className='bg-slate-950 text-white border-none rounded-lg w-full p-2.5 mt-4 focus:bg-success focus:shadow-xl' 
           id='button' 
           type='submit'
           onClick={formik.handleSubmit}>
@@ -98,7 +98,15 @@ export default function Home() {
       </div>
     </div>
 
-    <div className='flex-1'>
+    <div className='md:hidden flex-col'>
+      <Image className='max-w-none'
+      src='./illustration-sign-up-mobile.svg' 
+      alt='illustration-desktop'
+      width={375}
+      height={830} />
+    </div>
+
+    <div className='md:flex-1'>
       <Image className='max-w-none'
       src='./illustration-sign-up-desktop.svg' 
       alt='illustration-desktop'

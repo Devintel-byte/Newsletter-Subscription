@@ -20,7 +20,7 @@ export default function Success({email, setSuccess}) {
                 </div>
 
                 <button 
-                className='bg-slate-950 text-white border-none rounded-lg w-full p-2.5 mt-4 md:shadow-lg focus:bg-success' 
+                className='bg-slate-950 text-white border-none rounded-lg w-full p-2.5 mt-4 focus:bg-success focus:shadow-lg' 
                 id='button'
                 onClick={() => setSuccess(false)} 
                 >
